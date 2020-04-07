@@ -94,14 +94,13 @@ void logIn()
 		for (User item : listUsers) {
 			if (item.name == name && item.password == password) {
 				index++;
-				cout << "\t\tHello " << item.name << "!" << endl;			
-
-			}
-			else if (item.name != name && item.password != password&& index == 1) {
+				cout << "\t\tHello " << item.name << "!" << endl;	
 				isEmpty = true;
+				break;
 			}
+			
 		}
-		if (isEmpty == true) {
+		if (isEmpty == false) {
 			cout << "User not found!" << endl;
 		}
 		cout << endl;
